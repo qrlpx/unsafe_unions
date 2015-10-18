@@ -63,5 +63,5 @@ fn main(){
 
 ### TODO
 
-* write doc
+* write docs
 * write tests
