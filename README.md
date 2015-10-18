@@ -14,7 +14,7 @@ unsafe_unions!{
 }
 ```
 
-`$Storage` currently needs to be specified as we have currently no way of figuring out which field is the biggest at compile-time. `$Storage` shall be a POD-type bigger or equal in size of the biggest field. 
+`$Storage` shall be a POD-type bigger or equal in size of the biggest field. This needs to be specified, as we have currently no way of figuring out which field is the biggest at compile-time. 
 
 **Generated Functions**:
 
