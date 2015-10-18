@@ -4,8 +4,6 @@
 )]
 #![plugin(interpolate_idents)]
 
-#![macro_reexport(interpolate_idents)]
-
 #[macro_export]
 macro_rules! unsafe_unions {
     ($(
