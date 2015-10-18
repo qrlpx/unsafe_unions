@@ -4,11 +4,13 @@
 
 **Generated API**:
 
-`pub unsafe fn new_{field}(val: {field_ty}) -> Self;`
-`pub unsafe fn write_{field}(&mut self, val: {field_ty});`
-`pub unsafe fn read_{field}(&self) -> {field_ty};`
-`pub unsafe fn as_{field}(&self) -> &{field_ty};`
-`pub unsafe fn as_{field}_mut(&mut self) -> &mut {field_ty};`
+```rust
+pub unsafe fn new_{field}(val: {field_ty}) -> Self;
+pub unsafe fn write_{field}(&mut self, val: {field_ty});
+pub unsafe fn read_{field}(&self) -> {field_ty};
+pub unsafe fn as_{field}(&self) -> &{field_ty};
+pub unsafe fn as_{field}_mut(&mut self) -> &mut {field_ty};
+```
 
 ### Example
 
