@@ -3,6 +3,7 @@ name = "unsafe_unions"
 version = "0.0.0"
 authors = ["qrlpx <>"]
 
+repository = "https://github.com/qrlpx/unsafe_unions"
 description = "A macro to generate structures which behave like C-style unions."
 
 license = "CC0-1.0"
