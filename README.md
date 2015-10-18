@@ -2,7 +2,21 @@
 
 **Note**: This macro currently uses the plugin [interpolate_idents](https://github.com/SkylerLipthay/interpolate_idents) as a workaround for a [rust bug](https://github.com/SkylerLipthay/interpolate_idents), and as such, rust nightly is a requirement.
 
-**Generated API**:
+**API**
+
+```rust
+unsafe_unions!{
+    union $Union: $Storage {
+        $field: $field_ty,
+        ...
+    }
+    ...
+}
+```
+
+`$Storage` currently needs to be specified as we have currently no way of figuring out which field is the biggest at compile-time. `$Storage` shall be a POD-type bigger or equal in size of the biggest field. 
+
+**Generated Functions**:
 
 ```rust
 pub unsafe fn new_{field}(val: {field_ty}) -> Self;
