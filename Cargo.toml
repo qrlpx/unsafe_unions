@@ -1,0 +1,11 @@
+[package]
+name = "unsafe_unions"
+version = "0.0.0"
+authors = ["qrlpx <>"]
+
+description = "A macro to generate structures which behave like C-style unions."
+
+license = "CC0-1.0"
+
+[dependencies]
+interpolate_idents = "0.0.4"
