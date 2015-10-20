@@ -1,6 +1,6 @@
 # unsafe_unions
 
-**Note**: This macro currently uses the plugin [interpolate_idents](https://github.com/SkylerLipthay/interpolate_idents) as a workaround for a [rust bug](https://github.com/SkylerLipthay/interpolate_idents), and as such, rust nightly is a requirement.
+**Note**: This macro currently uses the plugin [interpolate_idents](https://github.com/SkylerLipthay/interpolate_idents) as a workaround for a [rust bug](https://github.com/rust-lang/rust/issues/12249), and as such, rust nightly is a requirement.
 
 **API**
 
