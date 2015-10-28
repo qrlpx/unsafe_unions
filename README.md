@@ -63,5 +63,6 @@ fn main(){
 
 ### TODO
 
+* maybe 'untagged_unions' is a more fitting name?
 * write docs
 * write tests
