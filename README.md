@@ -1,7 +1,17 @@
 # unsafe_unions
 
+### Updates
 
-**API**
+** (0.0.2): The lib now runs on stable & no_std.
+
+Downside is, it's now a bit weirder to execute the different ops: instead of differently named functions, you now get different "modes", each mode for one op.
+
+`.get_foo() => .by_ref().foo()`
+`.get_foo_mut() => .by_mut().foo()`
+`.read_foo() => .read().foo()`
+`.write_foo(x) => .write().foo(x)`
+
+### API
 
 ```rust
 unsafe_unions!{
