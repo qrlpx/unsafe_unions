@@ -32,7 +32,7 @@ biggest at compile-time.
 **Generated Methods**:
 
 ```rust
-/// $union/$union<()> (default mode)
+/** $union/$union<()> (default mode) **/
 
 /// Creates a new $union with uninitialized memory.
 pub fn new() -> Self;
@@ -59,25 +59,25 @@ pub fn read(&self) -> &$union<Read>;
 pub fn write(&mut self) -> &mut $union<Read>;
 
 
-/// $union<ByRef> (by-ref mode)
+/** $union<ByRef> (by-ref mode) **/
 
 /// Casts `&self` to `&$variant_ty`.
 pub unsafe fn $variant(&self) -> &$variant_ty;
 
 
-/// $union<ByMut> (by-mut mode)
+/** $union<ByMut> (by-mut mode) **/
 
 /// Casts `&mut self` to `&mut $variant_ty`.
 pub unsafe fn $variant(&mut self) -> &mut $variant_ty;
 
 
-/// $union<Read> (read mode)
+/** $union<Read> (read mode) **/
 
 /// `ptr::read`-operation
 pub unsafe fn $variant(&self) -> $variant_ty;
 
 
-/// $union<Write> (write mode)
+/** $union<Write> (write mode) **/
 
 /// `ptr::write`-operation
 pub unsafe fn $variant(&mut self, v: $variant_ty);
