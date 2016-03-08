@@ -50,7 +50,7 @@ pub fn write(&mut self) -> &mut $union<Read>;
 pub unsafe fn $variant(&self) -> &$variant_ty;
 
 
-/// $union<ByMut> (by-ref mode)
+/// $union<ByMut> (by-mut mode)
 
 /// Casts `&mut self` to `&mut $variant_ty`.
 pub unsafe fn $variant(&mut self) -> &mut $variant_ty;
