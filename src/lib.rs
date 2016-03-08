@@ -17,7 +17,6 @@ macro_rules! unsafe_unions {
     
     // pub union
     (
-        $(#[$attr:meta])* 
         pub union $union:ident: $repr:ty {
             $($variant:ident: $variant_ty:ty),+
         }
@@ -34,7 +33,6 @@ macro_rules! unsafe_unions {
     
     // pub union (trailing comma)
     (
-        $(#[$attr:meta])* 
         pub union $union:ident: $repr:ty {
             $($variant:ident: $variant_ty:ty),+,
         }
@@ -51,7 +49,6 @@ macro_rules! unsafe_unions {
         
     // non-pub union
     (
-        $(#[$attr:meta])* 
         union $union:ident: $repr:ty {
             $($variant:ident: $variant_ty:ty),+
         }
@@ -68,7 +65,6 @@ macro_rules! unsafe_unions {
     
     // non-pub union (trailing comma)
     (
-        $(#[$attr:meta])* 
         union $union:ident: $repr:ty {
             $($variant:ident: $variant_ty:ty),+,
         }
