@@ -1,6 +1,3 @@
-#![feature(plugin)]
-#![plugin(interpolate_idents)]
-
 #[macro_use]
 extern crate unsafe_unions;
 
@@ -16,15 +13,15 @@ unsafe_unions!{
 
 fn main(){
     unsafe {
-        let mut val = UntaggedValue::new_integer(200);
-        assert_eq!(*val.as_integer(), 200);
+        let mut val = UntaggedValue::<()>::integer(200);
+        assert_eq!(*val.by_ref().integer(), 200);
 
-        *val.as_boolean_mut() = false;
-        assert_eq!(*val.as_boolean(), false);
+        *val.by_mut().boolean() = false;
+        assert_eq!(*val.by_ref().boolean(), false);
     
-        val.write_string("foobar".to_owned());
-        assert_eq!(&**val.as_string(), "foobar");
+        val.write().string("foobar".to_owned());
+        assert_eq!(&**val.by_ref().string(), "foobar");
 
-        drop(val.read_string());
+        drop(val.read().string());
     }
 }
