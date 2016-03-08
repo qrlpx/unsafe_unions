@@ -26,7 +26,7 @@ unsafe_unions!{
 ```
 
 `$repr` shall be a POD-type bigger or equal in size of the biggest field.
-This needs to be specified, as we have currently no way of figuring out which field is the
+This needs to be specified, as we have currently no way of figuring out which variant is the
 biggest at compile-time. 
 
 **Generated Methods**:
