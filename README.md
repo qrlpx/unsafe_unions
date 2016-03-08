@@ -43,6 +43,9 @@ pub fn zeroed() -> Self;
 /// Creates a new $union with uninitialized memory and writes `v` to it.
 pub unsafe fn $variant(v: $variant_ty) -> Self;
 
+pub fn repr(&self) -> &$repr;
+pub fn repr_mut(&mut self) -> &mut $repr;
+
 /// Enters by-ref mode.
 pub fn by_ref(&self) -> &$union<ByRef>;
 
@@ -80,7 +83,7 @@ pub unsafe fn $variant(&self) -> $variant_ty;
 pub unsafe fn $variant(&mut self, v: $variant_ty);
 ```
 
-All $union-modi also implement `Clone` and `Copy`.
+All `$union`-types also implement `Clone` and `Copy`.
 
 ### Example
 
