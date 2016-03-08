@@ -103,7 +103,7 @@ unsafe_unions!{
 
 fn main(){
     unsafe {
-        let mut val = UntaggedValue::<()>::integer(200);
+        let mut val: UntaggedValue = UntaggedValue::integer(200);
         assert_eq!(*val.by_ref().integer(), 200);
 
         *val.by_mut().boolean() = false;
