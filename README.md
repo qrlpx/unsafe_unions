@@ -101,16 +101,6 @@ unsafe_unions!{
     }
 }
 
-unsafe_unions!{
-    union UntaggedValue: [u64; 3] {
-        nil: (),
-        boolean: bool,
-        integer: i64,
-        floating: f64,
-        string: String,
-    }
-}
-
 fn main(){
     unsafe {
         let mut val = UntaggedValue::<()>::integer(200);
