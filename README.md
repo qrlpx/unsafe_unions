@@ -4,7 +4,7 @@
 
 **(0.0.2)**: The lib now runs on stable & no_std.
 
-Downside is, it's now a bit weirder to execute the different ops: instead of differently named functions, you now get different "modes", each mode for one op.
+Downside is, it's now a bit weirder to execute the different ops: instead of differently named functions, you now have to put your union-type in different "modes", each mode for one op.
 
 ```
 .get_foo() => .by_ref().foo()
